@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Fredoka:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", serif;
+    margin: 0;
+    background: linear-gradient(to right, #0a0a0a, #5adbe7);
+    color: white;
+}
+.conteneur {
+    width: 1300px;
+    margin: 0 auto;
+}
+nav a, li {
+    color: white;
+} 
+a {
+    text-decoration: none;
+}
+ul {
+    margin: 5px 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+p.menu {
+    margin: 0px 0 0 0;
+}
+footer {
+    background: left/150px, url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEuY3h-U0eVNYtI9G_yh0Ggjb4eqBJ1Ous6Q&s"), #1a1a1a;
+    padding: 15px;
+    font-size: 25px;  
+    margin-top: 50px;      
+    color: black;
+}
+h1 {
+    font-size: 40px;
+    font-family: 'Fredico', cursive;
+    margin: 40px 0 10px;
+    text-align: center;
+}
+header {
+    font-size: 70px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    text-shadow: 0 0 30px black;
+}
+.contenue {
+    padding-left: 20px;
+}
+
+#flexbox-offre {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes */
+    gap: 30px;
+    padding: 20px;
+    background: linear-gradient(to right, #0a0a0a, #5adbe7);
+}
+
+#flexbox-offre div {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#flexbox-offre h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#flexbox-offre p {
+    color: #666;
+}
+#fond-noir {
+    background-image: url("../images/fond-noir.jpeg");
+}
+#flexbox-foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#slogan {
+    display: block;
+    font-size: 30px;
+    font-family: 'Roboto', arial, sans-serif;
+}
+#bienvenue {
+    background-image: url("../images/Portofolio.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+#destinations {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+@media all and (max-width: 1350px) {
+    .conteneur {
+        width: 800px;
+    }
+    #flexbox-offre {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* 768 : tablette */
+@media all and (max-width: 850px) {
+    .conteneur {
+        width: 500px;
+    }
+    #flexbox-foot {
+        flex-direction: column;
+        gap: 30px;
+    }
+    #flexbox-offre {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #image-foot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 480 : smartphone */
+@media all and (max-width: 560px) {
+    .conteneur {
+        width: 100%;
+        padding: 10px;
+    }
+    .bienvenue {
+        padding: 20px;
+    }
+}

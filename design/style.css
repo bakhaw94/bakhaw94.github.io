@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Fredoka:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%
+}      
+nav a,li {
+    color: black;
+}      
+h1 {
+    font-size: 40px;
+    font-family: 'Fredico', cursive;
+    margin: 40px 0 10px;
+    text-align: center;
+}
+h2 {
+    /*margin: HAUT DROIT BAS GAUCHE
+    si le bas n'es pas donné alors il est égal au haut et pareil pour la droite et la gauche*/
+    margin: 40px 0 0 0;
+}
+p.menu {
+    margin: 0px 0 0 0;
+}
+ul {
+    margin: 5px 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+body {
+    font-family: "Roboto", serif;
+    margin: 0;
+    background: linear-gradient(to right, #0a0a0a, #5adbe7);
+    color: white;
+}
+header {
+    /*
+    - nom (black white purple)
+    - code en hexadecimal (#93441A)
+    - rgb rgb(rouge, vert, bleu)
+    - rgba rgba(rouge, vert, bleu, 0 à 1)
+    - text-shadow: x y flou couleur;
+    */
+    font-size: 70px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    text-shadow: 0 0 30px black;
+    /*padding-top: 200px;*/
+}
+
+    /*background-color: #CACACA;*/
+    /*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Nx5cxZ2bO8WrRPPovUsKi02uRij1u5saWA&s");*/
+    /*background-size: 150px;*/
+footer {
+    background: left/150px, url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEuY3h-U0eVNYtI9G_yh0Ggjb4eqBJ1Ous6Q&s"), #CACACA;
+    padding: 15px;
+    font-size: 25px;  
+    margin-top: 50px;   
+    color: black;   
+}
+a {
+    text-decoration: none;
+}
+#bienvenue {
+    background-image: url("../images/Portofolio.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    /*justify-content: left;*/
+    align-items: center;
+    /*flex-direction: */
+}
+#slogan {
+    display: block;
+    font-size: 30px;
+    font-family: 'Roboto', arial, sans-serif;
+}
+#accroche {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+#edlain {
+    background-image: url("../images/edlain.jpeg");
+    background-position: center;
+    grid-row: 1 / 1;
+}
+#rodney {
+    background-image: url("../images/rodney.jpeg");
+    background-position: center;
+    /*grid-row: ;*/
+}
+/*
+grid-row: ligne de debut / ligne après celle de fin
+grid-column: colone du debut / colone après celle de fin
+*/
+#adem {
+    background-image: url("../images/adem.jpeg");
+    background-position: center;
+}
+#matis {
+    background-image: url("../images/matis.jpeg");
+    background-position: center;
+}
+#david {
+    background-image: url("../images/david.jpeg");
+    background-position: center;
+}
+#flexbox-prsn{
+    /*display: flex;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+#voir {
+    display: inline-flex;
+    align-items: center; 
+    color: #5adbe0;
+    transition: all 0.4s;
+    gap: 3px;
+}
+#voir:hover {
+    gap: 25px;
+}
+#flexbox-foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cv {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 15px solid white;
+    transition: all 0.2s;
+    border-radius: 200px;
+    font-size: 30px;
+    padding-bottom: 5px; /* Ajuste l'espace en bas */
+    color: black;
+    text-shadow: 0 0 5px #fff, 
+                 0 0 15px #5adbe0, 
+                 0 0 15px #5FC2BA;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */ 
+    align-items: flex-end; /* Placer le texte en bas */
+    /*box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);*/
+}
+.cv:hover {
+    border: 4px solid #5adbe0;    
+    border-radius: 20px;
+    transition: all 0.4s;
+}
+/*border-radius: haut-gauche haut-droit bas-droit bas-gauche;*/
+/*border: EPAISSEUR TYPE COULEUR;*/
+.gras {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.souligner {
+    text-decoration: underline;
+}
+
+
+.contenue {
+    padding-left: 20px;
+}
+/*
+element1 = applique a element1
+element1, element2 = applique à element1 et element2
+element0 element1 = applique à element1 s'il est dans element0 
+*/
+.conteneur {
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+/* LE RESPONSIVE DISIGN */
+
+/* 1300 : notebook (petit pc ou grande tablette) */
+@media all and (max-width: 1350px) {
+    .conteneur {
+        width: 800px;
+    }
+    #flexbox-prsn {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #rodney {
+        grid-column: auto;
+    }
+    #matis {
+        grid-column: 1 / 2;
+    }
+    #adem {
+        grid-column: 1 / 2;
+    }
+}
+
+/* 768 : tablette */
+@media all and (max-width: 850px) {
+    .conteneur {
+        width: 500px;
+    }
+    #flexbox-prsn {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #matis{
+        grid-column: auto;
+    }
+    #edlain {
+        grid-row: auto;
+    }
+    #flexbox-foot {
+        flex-direction: column;
+        gap: 30px;
+    }
+    #image-foot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 480 : smartphone */
+@media all and (max-width: 560px) {
+    .conteneur {
+        width: 100%;
+        padding: 10px;
+    }
+    .bienvenue {
+        padding: 20px;
+    }
+}

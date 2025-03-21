@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+   
+    <head>
+        
+        <title>Rodney - OVPS</title>
+        <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="../design/style-cv.css">
+       
+        <!-- <meta name="og:title" content="Rodney - OVPS">
+        <meta name="og:description" content="">
+        <meta name="og:image" content="">
+        <meta name="og:url" content="LIEN DU SITE">
+        <meta name="og:site_name" content="Portofolio - OVPS">
+        <meta name="og:image:all" content="">
+        
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
+        <style>
+            .menu {
+                position: fixed;
+                top: 0;
+                left: -200px;
+                width: 200px;
+                height: 100vh;
+                background: #333;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 60px; /* Augmenté pour descendre les liens */
+                transition: left 0.3s;
+            }
+            .menu.active {
+                left: 0;
+            }
+            .menu-burger {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                cursor: pointer;
+                background: #333;
+                padding: 10px;
+                border-radius: 5px;
+                z-index: 1000;
+            }
+            .menu-burger div {
+                width: 30px;
+                height: 4px;
+                background: white;
+                margin: 5px;
+                transition: 0.4s;
+            }
+            .menu.active + .menu-burger {
+                left: 220px;
+            }
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                padding-left: 10px;
+                margin-top: 40px; /* Augmenté pour descendre les liens */
+            }
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+                display: block;
+                transition: background 0.3s;
+            }
+            .nav-links a:hover {
+                background: #555;
+            }
+        </style>
+        <script>
+            function toggleMenu() {
+                const menu = document.querySelector(".menu");
+                menu.classList.toggle("active");
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="menu-burger" onclick="toggleMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <nav class="menu">
+            <div class="nav-links">
+                <a href="javascript:void(0)" onclick="toggleMenu()">✖ Fermer</a>
+                <a href="../index.html">Accueil</a>
+                <a href="./edlain.html">Edlain</a>
+                <a href="./rodney.html">Rodney</a>
+                <a href="./adem.html">Adem</a>
+                <a href="./matis.html">Matis</a>
+                <a href="./david.html">David</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </nav>
+   
+    <body>
+        <section id="bienvenue">    
+            
+            <!-- EN-TETE -->
+                <div class="conteneur">
+                    <header>
+                        Rodney - OVPS
+                        <span id="slogan">Mon savoir-faire en un coup d'œil : bienvenue sur mon portfolio !</span>
+                    </header>
+                </div>
+        </section>
+       
+        <section class="conteneur contenue">
+            <h1>À propos de moi</h1>
+            <p id="destinations"> Qui je suis, ce que je fais et pourquoi je le fais. </p>
+            
+            <section id="flexbox-offre">
+                <p>À propos de moi</p>
+            </section>
+        </section>
+    </body>
+   
+    <footer>
+        <div class="conteneur" id="flexbox-foot">
+            <div id="image-foot">
+                <img src="../images/apple-touch-icon.png" alt="ovps" style="width: 70px; display: block; margin: 0 auto;">
+                2025 © OVPS - Tous droits réservés
+            </div>
+            <nav>
+                <ul>
+                    <li><p class="menu"><a href="../index.html">Acceuil</a></p></li>
+                    <li><p class="menu"><a href="../contact.html">Contact</a></p></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</html>

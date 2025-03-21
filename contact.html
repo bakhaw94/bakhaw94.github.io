@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+        <title> Contact - OVPS </title>
+        <link rel="stylesheet" href="./design/style.css">
+        <style>
+            .menu {
+                position: fixed;
+                top: 0;
+                left: -200px;
+                width: 200px;
+                height: 100vh;
+                background: #333;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 60px; /* Augmenté pour descendre les liens */
+                transition: left 0.3s;
+            }
+            .menu.active {
+                left: 0;
+            }
+            .menu-burger {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                cursor: pointer;
+                background: #333;
+                padding: 10px;
+                border-radius: 5px;
+                z-index: 1000;
+            }
+            .menu-burger div {
+                width: 30px;
+                height: 4px;
+                background: white;
+                margin: 5px;
+                transition: 0.4s;
+            }
+            .menu.active + .menu-burger {
+                left: 220px;
+            }
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                padding-left: 10px;
+                margin-top: 40px; /* Augmenté pour descendre les liens */
+            }
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+                display: block;
+                transition: background 0.3s;
+            }
+            .nav-links a:hover {
+                background: #555;
+            }
+        </style>
+        <script>
+            function toggleMenu() {
+                const menu = document.querySelector(".menu");
+                menu.classList.toggle("active");
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="menu-burger" onclick="toggleMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <nav class="menu">
+            <div class="nav-links">
+                <a href="javascript:void(0)" onclick="toggleMenu()">✖ Fermer</a>
+                <a href="./index.html">Accueil</a>
+                <a href="./ville/edlain.html">Edlain</a>
+                <a href="./ville/rodney.html">Rodney</a>
+                <a href="./ville/adem.html">Adem</a>
+                <a href="./ville/matis.html">Matis</a>
+                <a href="./ville/david.html">David</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </nav>
+
+    <body>
+        <header style="text-align: center;">
+            OVPS
+        </header>
+        <section class="contenue">
+        <section>
+            <h1>Contactez-nous</h1>
+            <p>Voici notre adresse email : <a href=”mailto:ademghiloufi2006@gmail.com”> portofolio.ovps@gmail.com</a></p>
+            <p>Voici notre numéro :<a href="tel:0612345678"> 0612345678</a></p>
+        </section>
+        </section>
+        <footer>
+            <div class="conteneur" id="flexbox-foot">
+                <div id="image-foot">
+                    <img src="./images/apple-touch-icon.png" alt="Logo OVPS" style="width: 70px; display: block; margin: 0 auto;">
+                    2025 © OVPS - Tous droits réservés
+                </div>
+                <nav>
+                    <ul>
+                        <li><p class="menu"><a href="index.html">Accueil</a></p></li>
+                        <li><p class="menu"><a href="contact.html">Contact</a></p></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </body>
+</html>
